@@ -1,8 +1,15 @@
 [build]
-  publish = "."                # Deploy from root (since your index.html is in root)
-  command = "npm install"      # No build script in your package.json, so just install
+  command = "npm install && cp -r src/* dist/ && cp index.html dist/"
+  publish = "dist"
+  functions = "functions"  # Required even if empty
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+    X-Frame-Options = "DENY"

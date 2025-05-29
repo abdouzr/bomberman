@@ -4,10 +4,9 @@
   "type": "module",
   "description": "",
   "main": "backend/server.mjs",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.mjs",
-    "build": "echo 'No build step needed'"
+   "scripts": {
+    "build": "mkdir -p dist && cp -r src/* dist/ && cp index.html dist/",
+    "start": "node backend/server.mjs"
   },
   "repository": {
     "type": "git",
