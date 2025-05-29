@@ -6,7 +6,8 @@
   "main": "backend/server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.mjs"
+    "start": "node backend/server.mjs",
+    "build": "echo 'No build step needed'"
   },
   "repository": {
     "type": "git",

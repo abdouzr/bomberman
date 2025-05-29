@@ -1,0 +1,8 @@
+[build]
+  publish = "."                # Deploy from root (since your index.html is in root)
+  command = "npm install"      # No build script in your package.json, so just install
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
